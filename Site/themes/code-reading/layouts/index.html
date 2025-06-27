@@ -1,0 +1,96 @@
+{{ define "main" }}
+<section class="hero">
+    <div class="hero-container">
+        <h1 class="hero-title">Master Programming by Reading Code</h1>
+        <p class="hero-subtitle">Improve your coding skills through carefully crafted examples in Java and Python. Learn to read, understand, and trace through real code.</p>
+        <div class="hero-actions">
+            <a href="/getting-started/" class="btn btn-primary">Get Started</a>
+            <a href="/java/" class="btn btn-secondary">Browse Java Examples</a>
+        </div>
+        <div class="hero-stats">
+            <div class="stat">
+                <span class="stat-number">{{ len (where site.RegularPages "Section" "java") }}</span>
+                <span class="stat-label">Java Examples</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">{{ len (where site.RegularPages "Section" "python") }}</span>
+                <span class="stat-label">Python Examples</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">5</span>
+                <span class="stat-label">Difficulty Levels</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features">
+    <div class="features-container">
+        <h2 class="features-title">Why Reading Code Matters</h2>
+        <div class="features-grid">
+            <div class="feature">
+                <div class="feature-icon">🎯</div>
+                <h3>Targeted Practice</h3>
+                <p>Carefully designed examples focusing on specific programming concepts and patterns.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🔍</div>
+                <h3>Deep Analysis</h3>
+                <p>Each example includes "What to Notice" sections highlighting key programming concepts.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🚀</div>
+                <h3>Progressive Learning</h3>
+                <p>Start with beginner examples and gradually work up to more complex code structures.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📋</div>
+                <h3>Trace Examples</h3>
+                <p>Step-by-step execution traces help you understand how code actually runs.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="languages">
+    <div class="languages-container">
+        <h2 class="languages-title">Choose Your Language</h2>
+        <div class="languages-grid">
+            <div class="language-card">
+                <div class="language-icon">☕</div>
+                <h3>Java Examples</h3>
+                <p>Learn Java fundamentals through object-oriented examples, control structures, and data manipulation.</p>
+                <ul class="language-topics">
+                    <li>Variables & Types</li>
+                    <li>Control Structures</li>
+                    <li>Arrays & Collections</li>
+                    <li>Methods & Classes</li>
+                    <li>String Processing</li>
+                </ul>
+                <a href="/java/" class="btn btn-outline">Explore Java →</a>
+            </div>
+            <div class="language-card">
+                <div class="language-icon">🐍</div>
+                <h3>Python Examples</h3>
+                <p>Master Python through practical examples showcasing Pythonic patterns and data structures.</p>
+                <ul class="language-topics">
+                    <li>Data Types</li>
+                    <li>List & Dict Operations</li>
+                    <li>Functions & Modules</li>
+                    <li>File Processing</li>
+                    <li>Text Analysis</li>
+                </ul>
+                <a href="/python/" class="btn btn-outline">Explore Python →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="getting-started">
+    <div class="getting-started-container">
+        <h2>Ready to Start?</h2>
+        <p>Reading code is a skill that improves with practice. Start with our beginner-friendly examples and work your way up.</p>
+        <a href="/getting-started/" class="btn btn-primary">Read the Guide</a>
+    </div>
+</section>
+{{ end }}

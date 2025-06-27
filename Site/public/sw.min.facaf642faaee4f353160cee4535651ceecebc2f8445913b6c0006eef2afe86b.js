@@ -1,0 +1,1 @@
+navigator.serviceWorker&&navigator.serviceWorker.register("/ReadingCode/sw.js",{scope:"/ReadingCode/"})

@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Practice reading Python code with classes, functions, and built-in data structures">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://kristofer.github.io/ReadingCode/python/fundamentals/">
+  <meta property="og:site_name" content="Code Reading Practice Hub">
+  <meta property="og:title" content="Python Fundamentals: Classes, Functions, and Data Structures">
+  <meta property="og:description" content="Practice reading Python code with classes, functions, and built-in data structures">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="python">
+<title>Python Fundamentals: Classes, Functions, and Data Structures | Code Reading Practice Hub</title>
+<link rel="icon" href="/ReadingCode/favicon.png" >
+<link rel="manifest" href="/ReadingCode/manifest.json">
+<link rel="canonical" href="https://kristofer.github.io/ReadingCode/python/fundamentals/">
+<link rel="stylesheet" href="/ReadingCode/book.min.27c601ff251cc5c9796bb272aace960013cf351d0c28a7e1301487b32d4800ee.css" integrity="sha256-J8YB/yUcxcl5a7Jyqs6WABPPNR0MKKfhMBSHsy1IAO4=" crossorigin="anonymous">
+  <script defer src="/ReadingCode/fuse.min.js"></script>
+  <script defer src="/ReadingCode/en.search.min.7bd578431ba0b6fe89abea0c64745b22c47423da31169db281d3c5a20d8f7170.js" integrity="sha256-e9V4Qxugtv6Jq&#43;oMZHRbIsR0I9oxFp2ygdPFog2PcXA=" crossorigin="anonymous"></script>
+
+  <script defer src="/ReadingCode/sw.min.facaf642faaee4f353160cee4535651ceecebc2f8445913b6c0006eef2afe86b.js" integrity="sha256-&#43;sr2Qvqu5PNTFgzuRTVlHO7OvC&#43;ERZE7bAAG7vKv6Gs=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/ReadingCode/"><span>Code Reading Practice Hub</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ReadingCode/getting-started/" class="">How to Learn to Read Code: A Complete Guide</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ReadingCode/java/" class="">Java Code Reading Examples</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ReadingCode/java/beginner-basics/" class="">Java Beginner Basics: Numbers, Strings, Lists, and Maps</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ReadingCode/java/control-structures/" class="">Java Control Structures: Loops, Conditionals, and Logic Flow</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ReadingCode/java/fundamentals/" class="">Java Fundamentals: Control Structures, Built-in Types, and Variables</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ReadingCode/python/" class="">Python Code Reading Examples</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ReadingCode/python/beginner-basics/" class="">Python Beginner Examples: Numbers, Strings, Lists, and Dictionaries</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ReadingCode/python/fundamentals/" class="active">Python Fundamentals: Classes, Functions, and Data Structures</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ReadingCode/python/control-structures/" class="">Python Control Structures: Loops, Conditionals, and Data Processing</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ReadingCode/about/" class="">About Code Reading Practice</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/ReadingCode/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Python Fundamentals: Classes, Functions, and Data Structures</h3>
+
+  <label for="toc-control">
+    
+    <img src="/ReadingCode/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#how-to-read-python-code">How to Read Python Code</a></li>
+    <li><a href="#example-1-object-oriented-design-with-properties-and-methods">Example 1: Object-Oriented Design with Properties and Methods</a>
+      <ul>
+        <li><a href="#code-to-read">Code to Read:</a></li>
+        <li><a href="#what-to-notice">What to Notice:</a></li>
+        <li><a href="#trace-through-example">Trace Through Example:</a></li>
+      </ul>
+    </li>
+    <li><a href="#example-2-functional-programming-with-list-processing">Example 2: Functional Programming with List Processing</a>
+      <ul>
+        <li><a href="#code-to-read-1">Code to Read:</a></li>
+        <li><a href="#what-to-notice-1">What to Notice:</a></li>
+        <li><a href="#trace-through-example-1">Trace Through Example:</a></li>
+      </ul>
+    </li>
+    <li><a href="#practice-exercises">Practice Exercises</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="python-fundamentals-classes-functions-and-data-structures">
+  Python Fundamentals: Classes, Functions, and Data Structures
+  <a class="anchor" href="#python-fundamentals-classes-functions-and-data-structures">#</a>
+</h1>
+<p>This section focuses on reading Python code that demonstrates object-oriented programming, function design, and Python&rsquo;s powerful built-in data structures.</p>
+<blockquote class="book-hint info">
+  
+**Python Reading Strategy**: Pay attention to Python's readable syntax, built-in functions, and how the language promotes clear, concise code. Notice the use of conventions like underscore prefixes and descriptive variable names.
+
+</blockquote>
+
+<h2 id="how-to-read-python-code">
+  How to Read Python Code
+  <a class="anchor" href="#how-to-read-python-code">#</a>
+</h2>
+<div class="book-tabs">
+
+
+<input type="radio" class="toggle" name="tabs-approach" id="tabs-approach-0" checked="checked" />
+<label for="tabs-approach-0">Follow the Flow</label>
+<div class="book-tabs-content markdown-inner">
+**Start with function/class purpose** - Read docstrings and comments first
+</div>
+
+
+<input type="radio" class="toggle" name="tabs-approach" id="tabs-approach-1"  />
+<label for="tabs-approach-1">Notice Pythonic Patterns</label>
+<div class="book-tabs-content markdown-inner">  
+**Look for Python idioms** - List comprehensions, built-in functions, context managers
+</div>
+
+
+<input type="radio" class="toggle" name="tabs-approach" id="tabs-approach-2"  />
+<label for="tabs-approach-2">Understand Data Flow</label>
+<div class="book-tabs-content markdown-inner">
+**Track data transformations** - How data moves through functions and methods
+</div>
+
+
+<input type="radio" class="toggle" name="tabs-approach" id="tabs-approach-3"  />
+<label for="tabs-approach-3">Observe Conventions</label>
+<div class="book-tabs-content markdown-inner">
+**Notice Python conventions** - Naming, structure, and style patterns
+</div>
+
+
+</div>
+
+<hr>
+<h2 id="example-1-object-oriented-design-with-properties-and-methods">
+  Example 1: Object-Oriented Design with Properties and Methods
+  <a class="anchor" href="#example-1-object-oriented-design-with-properties-and-methods">#</a>
+</h2>
+<h3 id="code-to-read">
+  Code to Read:
+  <a class="anchor" href="#code-to-read">#</a>
+</h3>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">30
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">31
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">32
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">33
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">34
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">35
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">36
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">37
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">38
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">39
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">40
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">41
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">42
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">43
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">44
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">45
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">46
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">47
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">48
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">49
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">50
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">51
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">52
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">BankAccount</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">def</span> <span style="color:#d2a8ff;font-weight:bold">__init__</span>(self, account_holder, account_number, initial_balance<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">0.0</span>):
+</span></span><span style="display:flex;"><span>        self<span style="color:#ff7b72;font-weight:bold">.</span>account_holder <span style="color:#ff7b72;font-weight:bold">=</span> account_holder
+</span></span><span style="display:flex;"><span>        self<span style="color:#ff7b72;font-weight:bold">.</span>account_number <span style="color:#ff7b72;font-weight:bold">=</span> account_number
+</span></span><span style="display:flex;"><span>        self<span style="color:#ff7b72;font-weight:bold">.</span>_balance <span style="color:#ff7b72;font-weight:bold">=</span> initial_balance  <span style="color:#8b949e;font-style:italic"># Protected attribute</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#ff7b72;font-weight:bold">.</span>_transaction_history <span style="color:#ff7b72;font-weight:bold">=</span> []
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">def</span> <span style="color:#d2a8ff;font-weight:bold">deposit</span>(self, amount):
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">if</span> amount <span style="color:#ff7b72;font-weight:bold">&lt;=</span> <span style="color:#a5d6ff">0</span>:
+</span></span><span style="display:flex;"><span>            print(<span style="color:#a5d6ff">&#34;Invalid deposit amount&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#ff7b72">return</span> <span style="color:#79c0ff">False</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        self<span style="color:#ff7b72;font-weight:bold">.</span>_balance <span style="color:#ff7b72;font-weight:bold">+=</span> amount
+</span></span><span style="display:flex;"><span>        self<span style="color:#ff7b72;font-weight:bold">.</span>_transaction_history<span style="color:#ff7b72;font-weight:bold">.</span>append(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Deposited $</span><span style="color:#a5d6ff">{</span>amount<span style="color:#a5d6ff">:</span><span style="color:#a5d6ff">.2f</span><span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Deposited $</span><span style="color:#a5d6ff">{</span>amount<span style="color:#a5d6ff">:</span><span style="color:#a5d6ff">.2f</span><span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">. New balance: $</span><span style="color:#a5d6ff">{</span>self<span style="color:#ff7b72;font-weight:bold">.</span>_balance<span style="color:#a5d6ff">:</span><span style="color:#a5d6ff">.2f</span><span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">return</span> <span style="color:#79c0ff">True</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">def</span> <span style="color:#d2a8ff;font-weight:bold">withdraw</span>(self, amount):
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">if</span> amount <span style="color:#ff7b72;font-weight:bold">&lt;=</span> <span style="color:#a5d6ff">0</span>:
+</span></span><span style="display:flex;"><span>            print(<span style="color:#a5d6ff">&#34;Invalid withdrawal amount&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#ff7b72">return</span> <span style="color:#79c0ff">False</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">if</span> amount <span style="color:#ff7b72;font-weight:bold">&gt;</span> self<span style="color:#ff7b72;font-weight:bold">.</span>_balance:
+</span></span><span style="display:flex;"><span>            print(<span style="color:#a5d6ff">&#34;Insufficient funds&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#ff7b72">return</span> <span style="color:#79c0ff">False</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        self<span style="color:#ff7b72;font-weight:bold">.</span>_balance <span style="color:#ff7b72;font-weight:bold">-=</span> amount
+</span></span><span style="display:flex;"><span>        self<span style="color:#ff7b72;font-weight:bold">.</span>_transaction_history<span style="color:#ff7b72;font-weight:bold">.</span>append(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Withdrew $</span><span style="color:#a5d6ff">{</span>amount<span style="color:#a5d6ff">:</span><span style="color:#a5d6ff">.2f</span><span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Withdrew $</span><span style="color:#a5d6ff">{</span>amount<span style="color:#a5d6ff">:</span><span style="color:#a5d6ff">.2f</span><span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">. Remaining balance: $</span><span style="color:#a5d6ff">{</span>self<span style="color:#ff7b72;font-weight:bold">.</span>_balance<span style="color:#a5d6ff">:</span><span style="color:#a5d6ff">.2f</span><span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">return</span> <span style="color:#79c0ff">True</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#d2a8ff;font-weight:bold">@property</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">def</span> <span style="color:#d2a8ff;font-weight:bold">balance</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">&#34;&#34;&#34;Read-only access to balance&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">return</span> self<span style="color:#ff7b72;font-weight:bold">.</span>_balance
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">def</span> <span style="color:#d2a8ff;font-weight:bold">get_transaction_history</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">return</span> self<span style="color:#ff7b72;font-weight:bold">.</span>_transaction_history<span style="color:#ff7b72;font-weight:bold">.</span>copy()  <span style="color:#8b949e;font-style:italic"># Return a copy for safety</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">def</span> <span style="color:#d2a8ff;font-weight:bold">__str__</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">return</span> <span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Account(</span><span style="color:#a5d6ff">{</span>self<span style="color:#ff7b72;font-weight:bold">.</span>account_holder<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">, #</span><span style="color:#a5d6ff">{</span>self<span style="color:#ff7b72;font-weight:bold">.</span>account_number<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">, $</span><span style="color:#a5d6ff">{</span>self<span style="color:#ff7b72;font-weight:bold">.</span>_balance<span style="color:#a5d6ff">:</span><span style="color:#a5d6ff">.2f</span><span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">)&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">def</span> <span style="color:#d2a8ff;font-weight:bold">__repr__</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">return</span> <span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;BankAccount(&#39;</span><span style="color:#a5d6ff">{</span>self<span style="color:#ff7b72;font-weight:bold">.</span>account_holder<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#39;, </span><span style="color:#a5d6ff">{</span>self<span style="color:#ff7b72;font-weight:bold">.</span>account_number<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">, </span><span style="color:#a5d6ff">{</span>self<span style="color:#ff7b72;font-weight:bold">.</span>_balance<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">)&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Usage example</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">if</span> <span style="color:#79c0ff">__name__</span> <span style="color:#ff7b72;font-weight:bold">==</span> <span style="color:#a5d6ff">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    account <span style="color:#ff7b72;font-weight:bold">=</span> BankAccount(<span style="color:#a5d6ff">&#34;Alice Johnson&#34;</span>, <span style="color:#a5d6ff">12345</span>, <span style="color:#a5d6ff">100.0</span>)
+</span></span><span style="display:flex;"><span>    account<span style="color:#ff7b72;font-weight:bold">.</span>deposit(<span style="color:#a5d6ff">50.0</span>)
+</span></span><span style="display:flex;"><span>    account<span style="color:#ff7b72;font-weight:bold">.</span>withdraw(<span style="color:#a5d6ff">25.0</span>)
+</span></span><span style="display:flex;"><span>    print(account)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#a5d6ff">&#34;History:&#34;</span>, account<span style="color:#ff7b72;font-weight:bold">.</span>get_transaction_history())
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="what-to-notice">
+  What to Notice:
+  <a class="anchor" href="#what-to-notice">#</a>
+</h3>
+<details ><summary>Python Class Structure and Conventions</summary>
+  <div class="markdown-inner">
+    
+**Constructor (`__init__`)**: Python's object initialization method
+- `self` parameter represents the instance being created
+- Default parameters: `initial_balance=0.0` provides sensible defaults
+
+**Attribute naming conventions**:
+- `self.account_holder` - public attribute
+- `self._balance` - protected attribute (single underscore convention)
+- `self._transaction_history` - internal data structure
+
+**Magic methods**:
+- `__str__()` - user-friendly string representation
+- `__repr__()` - developer/debugging string representation
+
+  </div>
+</details>
+
+<details ><summary>Property Decorators and Encapsulation</summary>
+  <div class="markdown-inner">
+    
+**@property decorator**: Makes `balance` accessible like an attribute
+```python
+# Instead of: account.get_balance()
+# You can write: account.balance
+```
+
+**Data protection patterns**:
+- `_balance` is protected (convention, not enforced)
+- `get_transaction_history()` returns a copy to prevent external modification
+- Methods validate input before modifying state
+
+  </div>
+</details>
+
+<details ><summary>String Formatting and F-strings</summary>
+  <div class="markdown-inner">
+    
+**F-string formatting**: `f"Deposited ${amount:.2f}"`
+- `:.2f` formats floating point to 2 decimal places
+- More readable than older `%` or `.format()` methods
+
+**Early returns for validation**:
+```python
+if amount <= 0:
+    print("Invalid deposit amount")
+    return False  # Exit early on invalid input
+```
+
+  </div>
+</details>
+
+<details ><summary>List Operations and Data Safety</summary>
+  <div class="markdown-inner">
+    
+**List methods**:
+- `append()` adds items to transaction history
+- `copy()` creates shallow copy for data protection
+
+**Main guard**: `if __name__ == "__main__":` 
+- Runs code only when script is executed directly
+- Prevents execution when module is imported
+
+  </div>
+</details>
+
+<h3 id="trace-through-example">
+  Trace Through Example:
+  <a class="anchor" href="#trace-through-example">#</a>
+</h3>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">20
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Object creation:</span>
+</span></span><span style="display:flex;"><span>account <span style="color:#ff7b72;font-weight:bold">=</span> BankAccount(<span style="color:#a5d6ff">&#34;Alice Johnson&#34;</span>, <span style="color:#a5d6ff">12345</span>, <span style="color:#a5d6ff">100.0</span>)
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># → account_holder=&#34;Alice Johnson&#34;, account_number=12345, </span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">#   _balance=100.0, _transaction_history=[]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Deposit operation:</span>
+</span></span><span style="display:flex;"><span>account<span style="color:#ff7b72;font-weight:bold">.</span>deposit(<span style="color:#a5d6ff">50.0</span>)
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># → amount &gt; 0: True, _balance = 100.0 + 50.0 = 150.0</span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># → _transaction_history = [&#34;Deposited $50.00&#34;]</span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># → returns True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Withdraw operation:</span>
+</span></span><span style="display:flex;"><span>account<span style="color:#ff7b72;font-weight:bold">.</span>withdraw(<span style="color:#a5d6ff">25.0</span>)
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># → amount &gt; 0: True, amount &lt;= _balance: True</span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># → _balance = 150.0 - 25.0 = 125.0</span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># → _transaction_history = [&#34;Deposited $50.00&#34;, &#34;Withdrew $25.00&#34;]</span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># → returns True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Property access:</span>
+</span></span><span style="display:flex;"><span>print(account<span style="color:#ff7b72;font-weight:bold">.</span>balance)  <span style="color:#8b949e;font-style:italic"># → 125.0 (calls the @property method)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="example-2-functional-programming-with-list-processing">
+  Example 2: Functional Programming with List Processing
+  <a class="anchor" href="#example-2-functional-programming-with-list-processing">#</a>
+</h2>
+<h3 id="code-to-read-1">
+  Code to Read:
+  <a class="anchor" href="#code-to-read-1">#</a>
+</h3>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">30
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">31
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">32
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">33
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">34
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">35
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">36
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">37
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">38
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">39
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">40
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">41
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">42
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">43
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">44
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">45
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">46
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">47
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">48
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">49
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">50
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">51
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">52
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">53
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">54
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">55
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">56
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">57
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">58
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">59
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">60
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">61
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">62
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">63
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">64
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">65
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">66
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">67
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">68
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">69
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">70
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">71
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">72
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">73
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">74
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">75
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">76
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">77
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">78
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff7b72">def</span> <span style="color:#d2a8ff;font-weight:bold">analyze_student_grades</span>(grades):
+</span></span><span style="display:flex;"><span>    <span style="color:#a5d6ff">&#34;&#34;&#34;Analyze a list of student grades and return statistics.&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">if</span> <span style="color:#ff7b72;font-weight:bold">not</span> grades:  <span style="color:#8b949e;font-style:italic"># Pythonic way to check for empty list</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">return</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#a5d6ff">&#39;error&#39;</span>: <span style="color:#a5d6ff">&#39;No grades to analyze&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#a5d6ff">&#39;count&#39;</span>: <span style="color:#a5d6ff">0</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic"># Filter out invalid grades (None, negative, or &gt; 100)</span>
+</span></span><span style="display:flex;"><span>    valid_grades <span style="color:#ff7b72;font-weight:bold">=</span> [grade <span style="color:#ff7b72">for</span> grade <span style="color:#ff7b72;font-weight:bold">in</span> grades 
+</span></span><span style="display:flex;"><span>                   <span style="color:#ff7b72">if</span> grade <span style="color:#ff7b72;font-weight:bold">is</span> <span style="color:#ff7b72;font-weight:bold">not</span> <span style="color:#79c0ff">None</span> <span style="color:#ff7b72;font-weight:bold">and</span> <span style="color:#a5d6ff">0</span> <span style="color:#ff7b72;font-weight:bold">&lt;=</span> grade <span style="color:#ff7b72;font-weight:bold">&lt;=</span> <span style="color:#a5d6ff">100</span>]
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">if</span> <span style="color:#ff7b72;font-weight:bold">not</span> valid_grades:
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">return</span> {<span style="color:#a5d6ff">&#39;error&#39;</span>: <span style="color:#a5d6ff">&#39;No valid grades found&#39;</span>, <span style="color:#a5d6ff">&#39;count&#39;</span>: <span style="color:#a5d6ff">0</span>}
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic"># Calculate basic statistics using built-in functions</span>
+</span></span><span style="display:flex;"><span>    total_students <span style="color:#ff7b72;font-weight:bold">=</span> len(valid_grades)
+</span></span><span style="display:flex;"><span>    average <span style="color:#ff7b72;font-weight:bold">=</span> sum(valid_grades) <span style="color:#ff7b72;font-weight:bold">/</span> total_students
+</span></span><span style="display:flex;"><span>    highest <span style="color:#ff7b72;font-weight:bold">=</span> max(valid_grades)
+</span></span><span style="display:flex;"><span>    lowest <span style="color:#ff7b72;font-weight:bold">=</span> min(valid_grades)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic"># Nested function for letter grade calculation</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">def</span> <span style="color:#d2a8ff;font-weight:bold">get_letter_grade</span>(score):
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">if</span> score <span style="color:#ff7b72;font-weight:bold">&gt;=</span> <span style="color:#a5d6ff">90</span>: <span style="color:#ff7b72">return</span> <span style="color:#a5d6ff">&#39;A&#39;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">elif</span> score <span style="color:#ff7b72;font-weight:bold">&gt;=</span> <span style="color:#a5d6ff">80</span>: <span style="color:#ff7b72">return</span> <span style="color:#a5d6ff">&#39;B&#39;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">elif</span> score <span style="color:#ff7b72;font-weight:bold">&gt;=</span> <span style="color:#a5d6ff">70</span>: <span style="color:#ff7b72">return</span> <span style="color:#a5d6ff">&#39;C&#39;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">elif</span> score <span style="color:#ff7b72;font-weight:bold">&gt;=</span> <span style="color:#a5d6ff">60</span>: <span style="color:#ff7b72">return</span> <span style="color:#a5d6ff">&#39;D&#39;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">else</span>: <span style="color:#ff7b72">return</span> <span style="color:#a5d6ff">&#39;F&#39;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic"># Use Counter for frequency counting</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">from</span> <span style="color:#ff7b72">collections</span> <span style="color:#ff7b72">import</span> Counter
+</span></span><span style="display:flex;"><span>    letter_grades <span style="color:#ff7b72;font-weight:bold">=</span> [get_letter_grade(grade) <span style="color:#ff7b72">for</span> grade <span style="color:#ff7b72;font-weight:bold">in</span> valid_grades]
+</span></span><span style="display:flex;"><span>    grade_distribution <span style="color:#ff7b72;font-weight:bold">=</span> Counter(letter_grades)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic"># Calculate passing rate (&gt;= 60)</span>
+</span></span><span style="display:flex;"><span>    passing_grades <span style="color:#ff7b72;font-weight:bold">=</span> [grade <span style="color:#ff7b72">for</span> grade <span style="color:#ff7b72;font-weight:bold">in</span> valid_grades <span style="color:#ff7b72">if</span> grade <span style="color:#ff7b72;font-weight:bold">&gt;=</span> <span style="color:#a5d6ff">60</span>]
+</span></span><span style="display:flex;"><span>    passing_rate <span style="color:#ff7b72;font-weight:bold">=</span> len(passing_grades) <span style="color:#ff7b72;font-weight:bold">/</span> total_students <span style="color:#ff7b72;font-weight:bold">*</span> <span style="color:#a5d6ff">100</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">return</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">&#39;count&#39;</span>: total_students,
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">&#39;average&#39;</span>: round(average, <span style="color:#a5d6ff">2</span>),
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">&#39;highest&#39;</span>: highest,
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">&#39;lowest&#39;</span>: lowest,
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">&#39;passing_rate&#39;</span>: round(passing_rate, <span style="color:#a5d6ff">1</span>),
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">&#39;grade_distribution&#39;</span>: dict(grade_distribution),
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">&#39;valid_grades&#39;</span>: valid_grades
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">def</span> <span style="color:#d2a8ff;font-weight:bold">display_grade_analysis</span>(analysis):
+</span></span><span style="display:flex;"><span>    <span style="color:#a5d6ff">&#34;&#34;&#34;Display the grade analysis in a formatted way.&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">if</span> <span style="color:#a5d6ff">&#39;error&#39;</span> <span style="color:#ff7b72;font-weight:bold">in</span> analysis:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Error: </span><span style="color:#a5d6ff">{</span>analysis[<span style="color:#a5d6ff">&#39;error&#39;</span>]<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">return</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    print(<span style="color:#a5d6ff">&#34;=== Grade Analysis ===&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Total students: </span><span style="color:#a5d6ff">{</span>analysis[<span style="color:#a5d6ff">&#39;count&#39;</span>]<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Average grade: </span><span style="color:#a5d6ff">{</span>analysis[<span style="color:#a5d6ff">&#39;average&#39;</span>]<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Highest grade: </span><span style="color:#a5d6ff">{</span>analysis[<span style="color:#a5d6ff">&#39;highest&#39;</span>]<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Lowest grade: </span><span style="color:#a5d6ff">{</span>analysis[<span style="color:#a5d6ff">&#39;lowest&#39;</span>]<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Passing rate: </span><span style="color:#a5d6ff">{</span>analysis[<span style="color:#a5d6ff">&#39;passing_rate&#39;</span>]<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">%&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    print(<span style="color:#a5d6ff">&#34;</span><span style="color:#79c0ff">\n</span><span style="color:#a5d6ff">Grade Distribution:&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">for</span> letter, count <span style="color:#ff7b72;font-weight:bold">in</span> sorted(analysis[<span style="color:#a5d6ff">&#39;grade_distribution&#39;</span>]<span style="color:#ff7b72;font-weight:bold">.</span>items()):
+</span></span><span style="display:flex;"><span>        percentage <span style="color:#ff7b72;font-weight:bold">=</span> (count <span style="color:#ff7b72;font-weight:bold">/</span> analysis[<span style="color:#a5d6ff">&#39;count&#39;</span>]) <span style="color:#ff7b72;font-weight:bold">*</span> <span style="color:#a5d6ff">100</span>
+</span></span><span style="display:flex;"><span>        print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;  </span><span style="color:#a5d6ff">{</span>letter<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">: </span><span style="color:#a5d6ff">{</span>count<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff"> students (</span><span style="color:#a5d6ff">{</span>percentage<span style="color:#a5d6ff">:</span><span style="color:#a5d6ff">.1f</span><span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">%)&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Example usage</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">if</span> <span style="color:#79c0ff">__name__</span> <span style="color:#ff7b72;font-weight:bold">==</span> <span style="color:#a5d6ff">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic"># Test with various scenarios</span>
+</span></span><span style="display:flex;"><span>    test_grades <span style="color:#ff7b72;font-weight:bold">=</span> [<span style="color:#a5d6ff">85</span>, <span style="color:#a5d6ff">92</span>, <span style="color:#a5d6ff">78</span>, <span style="color:#a5d6ff">67</span>, <span style="color:#a5d6ff">94</span>, <span style="color:#a5d6ff">81</span>, <span style="color:#a5d6ff">88</span>, <span style="color:#a5d6ff">76</span>, <span style="color:#a5d6ff">90</span>, <span style="color:#a5d6ff">82</span>]
+</span></span><span style="display:flex;"><span>    analysis <span style="color:#ff7b72;font-weight:bold">=</span> analyze_student_grades(test_grades)
+</span></span><span style="display:flex;"><span>    display_grade_analysis(analysis)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic"># Test with invalid data</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#a5d6ff">&#34;</span><span style="color:#79c0ff">\n</span><span style="color:#a5d6ff">&#34;</span> <span style="color:#ff7b72;font-weight:bold">+</span> <span style="color:#a5d6ff">&#34;=&#34;</span><span style="color:#ff7b72;font-weight:bold">*</span><span style="color:#a5d6ff">40</span>)
+</span></span><span style="display:flex;"><span>    invalid_grades <span style="color:#ff7b72;font-weight:bold">=</span> [<span style="color:#a5d6ff">85</span>, <span style="color:#79c0ff">None</span>, <span style="color:#ff7b72;font-weight:bold">-</span><span style="color:#a5d6ff">5</span>, <span style="color:#a5d6ff">110</span>, <span style="color:#a5d6ff">78</span>]
+</span></span><span style="display:flex;"><span>    analysis2 <span style="color:#ff7b72;font-weight:bold">=</span> analyze_student_grades(invalid_grades)
+</span></span><span style="display:flex;"><span>    display_grade_analysis(analysis2)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="what-to-notice-1">
+  What to Notice:
+  <a class="anchor" href="#what-to-notice-1">#</a>
+</h3>
+<details ><summary>List Comprehensions and Filtering</summary>
+  <div class="markdown-inner">
+    
+**List comprehension with filtering**:
+```python
+valid_grades = [grade for grade in grades 
+               if grade is not None and 0 <= grade <= 100]
+```
+- Combines iteration, filtering, and list creation in one line
+- More concise than equivalent for loop with if statements
+- `grade is not None` checks for None values specifically
+
+**Multiple filtering patterns**:
+```python
+passing_grades = [grade for grade in valid_grades if grade >= 60]
+letter_grades = [get_letter_grade(grade) for grade in valid_grades]
+```
+
+  </div>
+</details>
+
+<details ><summary>Built-in Functions and Data Processing</summary>
+  <div class="markdown-inner">
+    
+**Statistical functions**:
+- `len()` - count items
+- `sum()` - add all numbers  
+- `max()` / `min()` - find extremes
+- `round()` - control decimal precision
+
+**Collections module**:
+- `Counter()` automatically counts frequency of items
+- More efficient than manual counting loops
+
+  </div>
+</details>
+
+<details ><summary>Function Design Patterns</summary>
+  <div class="markdown-inner">
+    
+**Nested function**: `get_letter_grade()` defined inside `analyze_student_grades()`
+- Only accessible within the parent function
+- Encapsulates helper logic
+- Has access to parent function's variables
+
+**Return dictionary pattern**:
+- Functions return structured data as dictionaries
+- Makes it easy to access specific results
+- Self-documenting with key names
+
+  </div>
+</details>
+
+<details ><summary>Error Handling and Edge Cases</summary>
+  <div class="markdown-inner">
+    
+**Defensive programming**:
+```python
+if not grades:  # Handle empty input
+if not valid_grades:  # Handle no valid data
+if 'error' in analysis:  # Handle error conditions
+```
+
+**Truthiness in Python**:
+- `if not grades:` - empty lists are "falsy"
+- More Pythonic than `if len(grades) == 0:`
+
+  </div>
+</details>
+
+<h3 id="trace-through-example-1">
+  Trace Through Example:
+  <a class="anchor" href="#trace-through-example-1">#</a>
+</h3>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">21
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Input: [85, 92, 78, 67, 94]</span>
+</span></span><span style="display:flex;"><span>grades <span style="color:#ff7b72;font-weight:bold">=</span> [<span style="color:#a5d6ff">85</span>, <span style="color:#a5d6ff">92</span>, <span style="color:#a5d6ff">78</span>, <span style="color:#a5d6ff">67</span>, <span style="color:#a5d6ff">94</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Filtering step:</span>
+</span></span><span style="display:flex;"><span>valid_grades <span style="color:#ff7b72;font-weight:bold">=</span> [<span style="color:#a5d6ff">85</span>, <span style="color:#a5d6ff">92</span>, <span style="color:#a5d6ff">78</span>, <span style="color:#a5d6ff">67</span>, <span style="color:#a5d6ff">94</span>]  <span style="color:#8b949e;font-style:italic"># All valid (0-100, not None)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Statistics:</span>
+</span></span><span style="display:flex;"><span>total_students <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">5</span>
+</span></span><span style="display:flex;"><span>average <span style="color:#ff7b72;font-weight:bold">=</span> (<span style="color:#a5d6ff">85</span> <span style="color:#ff7b72;font-weight:bold">+</span> <span style="color:#a5d6ff">92</span> <span style="color:#ff7b72;font-weight:bold">+</span> <span style="color:#a5d6ff">78</span> <span style="color:#ff7b72;font-weight:bold">+</span> <span style="color:#a5d6ff">67</span> <span style="color:#ff7b72;font-weight:bold">+</span> <span style="color:#a5d6ff">94</span>) <span style="color:#ff7b72;font-weight:bold">/</span> <span style="color:#a5d6ff">5</span> <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">83.2</span>
+</span></span><span style="display:flex;"><span>highest <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">94</span>, lowest <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">67</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Letter grades:</span>
+</span></span><span style="display:flex;"><span>[get_letter_grade(<span style="color:#a5d6ff">85</span>), get_letter_grade(<span style="color:#a5d6ff">92</span>), <span style="color:#ff7b72;font-weight:bold">...</span>] 
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72;font-weight:bold">=</span> [<span style="color:#a5d6ff">&#39;B&#39;</span>, <span style="color:#a5d6ff">&#39;A&#39;</span>, <span style="color:#a5d6ff">&#39;C&#39;</span>, <span style="color:#a5d6ff">&#39;D&#39;</span>, <span style="color:#a5d6ff">&#39;A&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Counter result:</span>
+</span></span><span style="display:flex;"><span>grade_distribution <span style="color:#ff7b72;font-weight:bold">=</span> {<span style="color:#a5d6ff">&#39;A&#39;</span>: <span style="color:#a5d6ff">2</span>, <span style="color:#a5d6ff">&#39;B&#39;</span>: <span style="color:#a5d6ff">1</span>, <span style="color:#a5d6ff">&#39;C&#39;</span>: <span style="color:#a5d6ff">1</span>, <span style="color:#a5d6ff">&#39;D&#39;</span>: <span style="color:#a5d6ff">1</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Passing rate:</span>
+</span></span><span style="display:flex;"><span>passing_grades <span style="color:#ff7b72;font-weight:bold">=</span> [<span style="color:#a5d6ff">85</span>, <span style="color:#a5d6ff">92</span>, <span style="color:#a5d6ff">78</span>, <span style="color:#a5d6ff">67</span>, <span style="color:#a5d6ff">94</span>]  <span style="color:#8b949e;font-style:italic"># All &gt;= 60</span>
+</span></span><span style="display:flex;"><span>passing_rate <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">5</span><span style="color:#ff7b72;font-weight:bold">/</span><span style="color:#a5d6ff">5</span> <span style="color:#ff7b72;font-weight:bold">*</span> <span style="color:#a5d6ff">100</span> <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">100.0</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="practice-exercises">
+  Practice Exercises
+  <a class="anchor" href="#practice-exercises">#</a>
+</h2>
+<blockquote class="book-hint tip">
+  
+**Reading Exercise 1**: Trace through the BankAccount class with these operations:
+```python
+account = BankAccount("Bob", 54321, 200.0)
+account.withdraw(250.0)  # What happens?
+account.deposit(-50.0)   # What happens?
+```
+
+**Reading Exercise 2**: Predict the output of `analyze_student_grades([95, None, 105, 45, 88])`. What gets filtered out and why?
+
+**Reading Exercise 3**: Identify all the places where Python's "Pythonic" style makes the code more readable than equivalent Java code would be.
+
+</blockquote>
+
+<p><a  href="/python/beginner-basics/"   target="_blank" rel="noopener"  class="book-btn">← Previous: Beginner Basics</a>
+ <a  href="/python/control-structures/"   target="_blank" rel="noopener"  class="book-btn">Next: Control Structures →</a>
+</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#how-to-read-python-code">How to Read Python Code</a></li>
+    <li><a href="#example-1-object-oriented-design-with-properties-and-methods">Example 1: Object-Oriented Design with Properties and Methods</a>
+      <ul>
+        <li><a href="#code-to-read">Code to Read:</a></li>
+        <li><a href="#what-to-notice">What to Notice:</a></li>
+        <li><a href="#trace-through-example">Trace Through Example:</a></li>
+      </ul>
+    </li>
+    <li><a href="#example-2-functional-programming-with-list-processing">Example 2: Functional Programming with List Processing</a>
+      <ul>
+        <li><a href="#code-to-read-1">Code to Read:</a></li>
+        <li><a href="#what-to-notice-1">What to Notice:</a></li>
+        <li><a href="#trace-through-example-1">Trace Through Example:</a></li>
+      </ul>
+    </li>
+    <li><a href="#practice-exercises">Practice Exercises</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

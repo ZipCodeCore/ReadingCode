@@ -1,0 +1,15 @@
+{
+  "name": "Code Reading Practice Hub",
+  "short_name": "Code Reading Practice Hub",
+  "start_url": "/ReadingCode/",
+  "scope": "/ReadingCode/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/ReadingCode/favicon.svg",
+      "sizes": "512x512"
+    }
+  ]
+}

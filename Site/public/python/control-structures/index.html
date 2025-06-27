@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Practice reading Python code with loops, conditional statements, and data processing patterns">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://kristofer.github.io/ReadingCode/python/control-structures/">
+  <meta property="og:site_name" content="Code Reading Practice Hub">
+  <meta property="og:title" content="Python Control Structures: Loops, Conditionals, and Data Processing">
+  <meta property="og:description" content="Practice reading Python code with loops, conditional statements, and data processing patterns">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="python">
+<title>Python Control Structures: Loops, Conditionals, and Data Processing | Code Reading Practice Hub</title>
+<link rel="icon" href="/ReadingCode/favicon.png" >
+<link rel="manifest" href="/ReadingCode/manifest.json">
+<link rel="canonical" href="https://kristofer.github.io/ReadingCode/python/control-structures/">
+<link rel="stylesheet" href="/ReadingCode/book.min.27c601ff251cc5c9796bb272aace960013cf351d0c28a7e1301487b32d4800ee.css" integrity="sha256-J8YB/yUcxcl5a7Jyqs6WABPPNR0MKKfhMBSHsy1IAO4=" crossorigin="anonymous">
+  <script defer src="/ReadingCode/fuse.min.js"></script>
+  <script defer src="/ReadingCode/en.search.min.7bd578431ba0b6fe89abea0c64745b22c47423da31169db281d3c5a20d8f7170.js" integrity="sha256-e9V4Qxugtv6Jq&#43;oMZHRbIsR0I9oxFp2ygdPFog2PcXA=" crossorigin="anonymous"></script>
+
+  <script defer src="/ReadingCode/sw.min.facaf642faaee4f353160cee4535651ceecebc2f8445913b6c0006eef2afe86b.js" integrity="sha256-&#43;sr2Qvqu5PNTFgzuRTVlHO7OvC&#43;ERZE7bAAG7vKv6Gs=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/ReadingCode/"><span>Code Reading Practice Hub</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ReadingCode/getting-started/" class="">How to Learn to Read Code: A Complete Guide</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ReadingCode/java/" class="">Java Code Reading Examples</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ReadingCode/java/beginner-basics/" class="">Java Beginner Basics: Numbers, Strings, Lists, and Maps</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ReadingCode/java/control-structures/" class="">Java Control Structures: Loops, Conditionals, and Logic Flow</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ReadingCode/java/fundamentals/" class="">Java Fundamentals: Control Structures, Built-in Types, and Variables</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ReadingCode/python/" class="">Python Code Reading Examples</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ReadingCode/python/beginner-basics/" class="">Python Beginner Examples: Numbers, Strings, Lists, and Dictionaries</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ReadingCode/python/fundamentals/" class="">Python Fundamentals: Classes, Functions, and Data Structures</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ReadingCode/python/control-structures/" class="active">Python Control Structures: Loops, Conditionals, and Data Processing</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ReadingCode/about/" class="">About Code Reading Practice</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/ReadingCode/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Python Control Structures: Loops, Conditionals, and Data Processing</h3>
+
+  <label for="toc-control">
+    
+    <img src="/ReadingCode/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#how-to-read-python-control-structures">How to Read Python Control Structures</a></li>
+    <li><a href="#example-1-shopping-cart-with-complex-conditional-logic">Example 1: Shopping Cart with Complex Conditional Logic</a>
+      <ul>
+        <li><a href="#code-to-read">Code to Read:</a></li>
+        <li><a href="#what-to-notice">What to Notice:</a></li>
+        <li><a href="#trace-through-example">Trace Through Example:</a></li>
+      </ul>
+    </li>
+    <li><a href="#example-2-list-processing-with-loops-and-comprehensions">Example 2: List Processing with Loops and Comprehensions</a>
+      <ul>
+        <li><a href="#code-to-read-1">Code to Read:</a></li>
+        <li><a href="#what-to-notice-1">What to Notice:</a></li>
+        <li><a href="#trace-through-example-1">Trace Through Example:</a></li>
+      </ul>
+    </li>
+    <li><a href="#practice-exercises">Practice Exercises</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="python-control-structures-loops-conditionals-and-data-processing">
+  Python Control Structures: Loops, Conditionals, and Data Processing
+  <a class="anchor" href="#python-control-structures-loops-conditionals-and-data-processing">#</a>
+</h1>
+<p>This section focuses on reading Python code that demonstrates control structures in a Pythonic way - emphasizing readability, built-in functions, and elegant data processing patterns.</p>
+<blockquote class="book-hint info">
+  
+**Python Reading Strategy**: Notice how Python's syntax makes control flow very readable. Pay attention to indentation, built-in functions like `enumerate()` and `zip()`, and list comprehensions that replace traditional loops.
+
+</blockquote>
+
+<h2 id="how-to-read-python-control-structures">
+  How to Read Python Control Structures
+  <a class="anchor" href="#how-to-read-python-control-structures">#</a>
+</h2>
+<div class="book-tabs">
+
+
+<input type="radio" class="toggle" name="tabs-approach" id="tabs-approach-0" checked="checked" />
+<label for="tabs-approach-0">Follow Indentation</label>
+<div class="book-tabs-content markdown-inner">
+**Python uses indentation for structure** - No braces needed, indentation shows control flow
+</div>
+
+
+<input type="radio" class="toggle" name="tabs-approach" id="tabs-approach-1"  />
+<label for="tabs-approach-1">Notice Built-ins</label>
+<div class="book-tabs-content markdown-inner">  
+**Built-in functions simplify loops** - `enumerate()`, `zip()`, `range()` make code cleaner
+</div>
+
+
+<input type="radio" class="toggle" name="tabs-approach" id="tabs-approach-2"  />
+<label for="tabs-approach-2">Read Comprehensions</label>
+<div class="book-tabs-content markdown-inner">
+**List/dict comprehensions** - Compact way to transform data, replace many loops
+</div>
+
+
+<input type="radio" class="toggle" name="tabs-approach" id="tabs-approach-3"  />
+<label for="tabs-approach-3">Watch for Pythonic Patterns</label>
+<div class="book-tabs-content markdown-inner">
+**Idiomatic Python** - `for item in collection`, `if not list`, truthiness patterns
+</div>
+
+
+</div>
+
+<hr>
+<h2 id="example-1-shopping-cart-with-complex-conditional-logic">
+  Example 1: Shopping Cart with Complex Conditional Logic
+  <a class="anchor" href="#example-1-shopping-cart-with-complex-conditional-logic">#</a>
+</h2>
+<h3 id="code-to-read">
+  Code to Read:
+  <a class="anchor" href="#code-to-read">#</a>
+</h3>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">  1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">  2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">  3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">  4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">  5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">  6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">  7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">  8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">  9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 30
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 31
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 32
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 33
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 34
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 35
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 36
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 37
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 38
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 39
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 40
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 41
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 42
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 43
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 44
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 45
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 46
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 47
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 48
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 49
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 50
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 51
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 52
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 53
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 54
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 55
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 56
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 57
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 58
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 59
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 60
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 61
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 62
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 63
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 64
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 65
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 66
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 67
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 68
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 69
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 70
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 71
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 72
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 73
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 74
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 75
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 76
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 77
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 78
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 79
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 80
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 81
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 82
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 83
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 84
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 85
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 86
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 87
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 88
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 89
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 90
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 91
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 92
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 93
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 94
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 95
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 96
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 97
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 98
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 99
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">100
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">101
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">102
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">103
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">104
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">105
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">106
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">107
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff7b72">def</span> <span style="color:#d2a8ff;font-weight:bold">process_shopping_data</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#a5d6ff">&#34;&#34;&#34;Demonstrate Python number operations with shopping cart calculations.&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic"># Basic number types and operations</span>
+</span></span><span style="display:flex;"><span>    item_count <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">12</span>
+</span></span><span style="display:flex;"><span>    unit_price <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">15.99</span>
+</span></span><span style="display:flex;"><span>    tax_rate <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">0.08</span>
+</span></span><span style="display:flex;"><span>    shipping_threshold <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">50.0</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    print(<span style="color:#a5d6ff">&#34;=== Shopping Cart Calculation ===&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Items: </span><span style="color:#a5d6ff">{</span>item_count<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Unit price: $</span><span style="color:#a5d6ff">{</span>unit_price<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Tax rate: </span><span style="color:#a5d6ff">{</span>tax_rate <span style="color:#ff7b72;font-weight:bold">*</span> <span style="color:#a5d6ff">100</span><span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">%&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic"># Mathematical calculations</span>
+</span></span><span style="display:flex;"><span>    subtotal <span style="color:#ff7b72;font-weight:bold">=</span> unit_price <span style="color:#ff7b72;font-weight:bold">*</span> item_count
+</span></span><span style="display:flex;"><span>    tax_amount <span style="color:#ff7b72;font-weight:bold">=</span> subtotal <span style="color:#ff7b72;font-weight:bold">*</span> tax_rate
+</span></span><span style="display:flex;"><span>    total_before_shipping <span style="color:#ff7b72;font-weight:bold">=</span> subtotal <span style="color:#ff7b72;font-weight:bold">+</span> tax_amount
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic"># Conditional shipping calculation</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">if</span> total_before_shipping <span style="color:#ff7b72;font-weight:bold">&gt;=</span> shipping_threshold:
+</span></span><span style="display:flex;"><span>        shipping_cost <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">0.0</span>
+</span></span><span style="display:flex;"><span>        shipping_message <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">&#34;Free shipping!&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">else</span>:
+</span></span><span style="display:flex;"><span>        shipping_cost <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">8.99</span>
+</span></span><span style="display:flex;"><span>        needed_for_free <span style="color:#ff7b72;font-weight:bold">=</span> shipping_threshold <span style="color:#ff7b72;font-weight:bold">-</span> total_before_shipping
+</span></span><span style="display:flex;"><span>        shipping_message <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Add $</span><span style="color:#a5d6ff">{</span>needed_for_free<span style="color:#a5d6ff">:</span><span style="color:#a5d6ff">.2f</span><span style="color:#a5d6ff">}</span><span style="color:#a5d6ff"> for free shipping&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    final_total <span style="color:#ff7b72;font-weight:bold">=</span> total_before_shipping <span style="color:#ff7b72;font-weight:bold">+</span> shipping_cost
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;</span><span style="color:#79c0ff">\n</span><span style="color:#a5d6ff">=== Price Breakdown ===&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Subtotal: $</span><span style="color:#a5d6ff">{</span>subtotal<span style="color:#a5d6ff">:</span><span style="color:#a5d6ff">.2f</span><span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Tax: $</span><span style="color:#a5d6ff">{</span>tax_amount<span style="color:#a5d6ff">:</span><span style="color:#a5d6ff">.2f</span><span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Shipping: $</span><span style="color:#a5d6ff">{</span>shipping_cost<span style="color:#a5d6ff">:</span><span style="color:#a5d6ff">.2f</span><span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Final total: $</span><span style="color:#a5d6ff">{</span>final_total<span style="color:#a5d6ff">:</span><span style="color:#a5d6ff">.2f</span><span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Shipping note: </span><span style="color:#a5d6ff">{</span>shipping_message<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic"># Number formatting and mathematical operations</span>
+</span></span><span style="display:flex;"><span>    price_per_item_with_tax <span style="color:#ff7b72;font-weight:bold">=</span> (subtotal <span style="color:#ff7b72;font-weight:bold">+</span> tax_amount) <span style="color:#ff7b72;font-weight:bold">/</span> item_count
+</span></span><span style="display:flex;"><span>    rounded_total <span style="color:#ff7b72;font-weight:bold">=</span> round(final_total, <span style="color:#a5d6ff">2</span>)
+</span></span><span style="display:flex;"><span>    whole_dollars <span style="color:#ff7b72;font-weight:bold">=</span> int(final_total)
+</span></span><span style="display:flex;"><span>    cents <span style="color:#ff7b72;font-weight:bold">=</span> final_total <span style="color:#ff7b72;font-weight:bold">-</span> whole_dollars
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;</span><span style="color:#79c0ff">\n</span><span style="color:#a5d6ff">=== Detailed Analysis ===&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Price per item (with tax): $</span><span style="color:#a5d6ff">{</span>price_per_item_with_tax<span style="color:#a5d6ff">:</span><span style="color:#a5d6ff">.3f</span><span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Rounded total: $</span><span style="color:#a5d6ff">{</span>rounded_total<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Whole dollars: $</span><span style="color:#a5d6ff">{</span>whole_dollars<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Cents portion: </span><span style="color:#a5d6ff">{</span>cents<span style="color:#a5d6ff">:</span><span style="color:#a5d6ff">.2f</span><span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic"># Mathematical functions</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">import</span> <span style="color:#ff7b72">math</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    sqrt_items <span style="color:#ff7b72;font-weight:bold">=</span> math<span style="color:#ff7b72;font-weight:bold">.</span>sqrt(item_count)
+</span></span><span style="display:flex;"><span>    items_squared <span style="color:#ff7b72;font-weight:bold">=</span> item_count <span style="color:#ff7b72;font-weight:bold">**</span> <span style="color:#a5d6ff">2</span>
+</span></span><span style="display:flex;"><span>    max_value <span style="color:#ff7b72;font-weight:bold">=</span> max(item_count, whole_dollars)
+</span></span><span style="display:flex;"><span>    min_value <span style="color:#ff7b72;font-weight:bold">=</span> min(item_count, whole_dollars)
+</span></span><span style="display:flex;"><span>    absolute_difference <span style="color:#ff7b72;font-weight:bold">=</span> abs(item_count <span style="color:#ff7b72;font-weight:bold">-</span> whole_dollars)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;</span><span style="color:#79c0ff">\n</span><span style="color:#a5d6ff">=== Math Operations ===&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Square root of items: </span><span style="color:#a5d6ff">{</span>sqrt_items<span style="color:#a5d6ff">:</span><span style="color:#a5d6ff">.2f</span><span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Items squared: </span><span style="color:#a5d6ff">{</span>items_squared<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Maximum value: </span><span style="color:#a5d6ff">{</span>max_value<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Minimum value: </span><span style="color:#a5d6ff">{</span>min_value<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Absolute difference: </span><span style="color:#a5d6ff">{</span>absolute_difference<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic"># String to number conversion with error handling</span>
+</span></span><span style="display:flex;"><span>    price_string <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">&#34;24.95&#34;</span>
+</span></span><span style="display:flex;"><span>    quantity_string <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">&#34;7&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">try</span>:
+</span></span><span style="display:flex;"><span>        parsed_price <span style="color:#ff7b72;font-weight:bold">=</span> float(price_string)
+</span></span><span style="display:flex;"><span>        parsed_quantity <span style="color:#ff7b72;font-weight:bold">=</span> int(quantity_string)
+</span></span><span style="display:flex;"><span>        combined_value <span style="color:#ff7b72;font-weight:bold">=</span> parsed_price <span style="color:#ff7b72;font-weight:bold">*</span> parsed_quantity
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;</span><span style="color:#79c0ff">\n</span><span style="color:#a5d6ff">=== String to Number Conversion ===&#34;</span>)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Parsed price: $</span><span style="color:#a5d6ff">{</span>parsed_price<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Parsed quantity: </span><span style="color:#a5d6ff">{</span>parsed_quantity<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Combined value: $</span><span style="color:#a5d6ff">{</span>combined_value<span style="color:#a5d6ff">:</span><span style="color:#a5d6ff">.2f</span><span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">except</span> <span style="color:#f0883e;font-weight:bold">ValueError</span> <span style="color:#ff7b72">as</span> e:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Error converting strings to numbers: </span><span style="color:#a5d6ff">{</span>e<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic"># Percentage calculations</span>
+</span></span><span style="display:flex;"><span>    discount_percent <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">15</span>
+</span></span><span style="display:flex;"><span>    discount_amount <span style="color:#ff7b72;font-weight:bold">=</span> subtotal <span style="color:#ff7b72;font-weight:bold">*</span> (discount_percent <span style="color:#ff7b72;font-weight:bold">/</span> <span style="color:#a5d6ff">100</span>)
+</span></span><span style="display:flex;"><span>    discounted_price <span style="color:#ff7b72;font-weight:bold">=</span> subtotal <span style="color:#ff7b72;font-weight:bold">-</span> discount_amount
+</span></span><span style="display:flex;"><span>    savings_ratio <span style="color:#ff7b72;font-weight:bold">=</span> discount_amount <span style="color:#ff7b72;font-weight:bold">/</span> subtotal
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;</span><span style="color:#79c0ff">\n</span><span style="color:#a5d6ff">=== Discount Analysis ===&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Original subtotal: $</span><span style="color:#a5d6ff">{</span>subtotal<span style="color:#a5d6ff">:</span><span style="color:#a5d6ff">.2f</span><span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Discount (</span><span style="color:#a5d6ff">{</span>discount_percent<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">%): $</span><span style="color:#a5d6ff">{</span>discount_amount<span style="color:#a5d6ff">:</span><span style="color:#a5d6ff">.2f</span><span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;After discount: $</span><span style="color:#a5d6ff">{</span>discounted_price<span style="color:#a5d6ff">:</span><span style="color:#a5d6ff">.2f</span><span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Savings ratio: </span><span style="color:#a5d6ff">{</span>savings_ratio<span style="color:#a5d6ff">:</span><span style="color:#a5d6ff">.1%</span><span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">return</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">&#39;subtotal&#39;</span>: subtotal,
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">&#39;tax&#39;</span>: tax_amount,
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">&#39;shipping&#39;</span>: shipping_cost,
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">&#39;total&#39;</span>: final_total,
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">&#39;item_count&#39;</span>: item_count
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Example usage</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">if</span> <span style="color:#79c0ff">__name__</span> <span style="color:#ff7b72;font-weight:bold">==</span> <span style="color:#a5d6ff">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    cart_data <span style="color:#ff7b72;font-weight:bold">=</span> process_shopping_data()
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;</span><span style="color:#79c0ff">\n</span><span style="color:#a5d6ff">Returned data: </span><span style="color:#a5d6ff">{</span>cart_data<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Average cost per item: $</span><span style="color:#a5d6ff">{</span>cart_data[<span style="color:#a5d6ff">&#39;total&#39;</span>] <span style="color:#ff7b72;font-weight:bold">/</span> cart_data[<span style="color:#a5d6ff">&#39;item_count&#39;</span>]<span style="color:#a5d6ff">:</span><span style="color:#a5d6ff">.2f</span><span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="what-to-notice">
+  What to Notice:
+  <a class="anchor" href="#what-to-notice">#</a>
+</h3>
+<details ><summary>Python&#39;s Readable Conditional Logic</summary>
+  <div class="markdown-inner">
+    
+**Clean if-else structure**:
+```python
+if total_before_shipping >= shipping_threshold:
+    shipping_cost = 0.0
+    shipping_message = "Free shipping!"
+else:
+    shipping_cost = 8.99
+    # Complex calculation inside conditional
+    needed_for_free = shipping_threshold - total_before_shipping
+    shipping_message = f"Add ${needed_for_free:.2f} for free shipping"
+```
+
+**F-string formatting with calculations**:
+- Variables can be calculated inside f-strings
+- `:.2f` formats numbers to 2 decimal places
+- `:.1%` automatically converts decimals to percentages
+
+  </div>
+</details>
+
+<details ><summary>Built-in Functions and Error Handling</summary>
+  <div class="markdown-inner">
+    
+**Mathematical functions**:
+- `round()`, `max()`, `min()`, `abs()` work directly with numbers
+- `math.sqrt()` and `**` operator for exponentiation
+- Type conversion: `int()`, `float()` for string parsing
+
+**Exception handling**:
+```python
+try:
+    parsed_price = float(price_string)
+    # ... more operations
+except ValueError as e:
+    print(f"Error converting strings to numbers: {e}")
+```
+
+  </div>
+</details>
+
+<details ><summary>Dictionary Return Patterns</summary>
+  <div class="markdown-inner">
+    
+**Structured data return**:
+```python
+return {
+    'subtotal': subtotal,
+    'tax': tax_amount,
+    'shipping': shipping_cost,
+    'total': final_total,
+    'item_count': item_count
+}
+```
+- Functions return dictionaries for structured data
+- Keys provide self-documenting access to results
+- Easier to extend than returning multiple values
+
+  </div>
+</details>
+
+<h3 id="trace-through-example">
+  Trace Through Example:
+  <a class="anchor" href="#trace-through-example">#</a>
+</h3>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">14
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Initial values:</span>
+</span></span><span style="display:flex;"><span>item_count <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">12</span>, unit_price <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">15.99</span>, tax_rate <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">0.08</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Calculations:</span>
+</span></span><span style="display:flex;"><span>subtotal <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">15.99</span> <span style="color:#ff7b72;font-weight:bold">*</span> <span style="color:#a5d6ff">12</span> <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">191.88</span>
+</span></span><span style="display:flex;"><span>tax_amount <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">191.88</span> <span style="color:#ff7b72;font-weight:bold">*</span> <span style="color:#a5d6ff">0.08</span> <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">15.35</span> (rounded)
+</span></span><span style="display:flex;"><span>total_before_shipping <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">191.88</span> <span style="color:#ff7b72;font-weight:bold">+</span> <span style="color:#a5d6ff">15.35</span> <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">207.23</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Conditional logic:</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">if</span> <span style="color:#a5d6ff">207.23</span> <span style="color:#ff7b72;font-weight:bold">&gt;=</span> <span style="color:#a5d6ff">50.0</span>:  <span style="color:#8b949e;font-style:italic"># True</span>
+</span></span><span style="display:flex;"><span>    shipping_cost <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">0.0</span>
+</span></span><span style="display:flex;"><span>    shipping_message <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">&#34;Free shipping!&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>final_total <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">207.23</span> <span style="color:#ff7b72;font-weight:bold">+</span> <span style="color:#a5d6ff">0.0</span> <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">207.23</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="example-2-list-processing-with-loops-and-comprehensions">
+  Example 2: List Processing with Loops and Comprehensions
+  <a class="anchor" href="#example-2-list-processing-with-loops-and-comprehensions">#</a>
+</h2>
+<h3 id="code-to-read-1">
+  Code to Read:
+  <a class="anchor" href="#code-to-read-1">#</a>
+</h3>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">  1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">  2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">  3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">  4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">  5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">  6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">  7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">  8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">  9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 30
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 31
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 32
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 33
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 34
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 35
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 36
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 37
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 38
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 39
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 40
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 41
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 42
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 43
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 44
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 45
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 46
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 47
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 48
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 49
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 50
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 51
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 52
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 53
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 54
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 55
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 56
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 57
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 58
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 59
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 60
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 61
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 62
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 63
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 64
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 65
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 66
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 67
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 68
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 69
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 70
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 71
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 72
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 73
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 74
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 75
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 76
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 77
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 78
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 79
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 80
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 81
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 82
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 83
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 84
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 85
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 86
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 87
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 88
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 89
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 90
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 91
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 92
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 93
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 94
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 95
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 96
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 97
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 98
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 99
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">100
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">101
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">102
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">103
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">104
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">105
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">106
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">107
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">108
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">109
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff7b72">def</span> <span style="color:#d2a8ff;font-weight:bold">analyze_customer_feedback</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#a5d6ff">&#34;&#34;&#34;Demonstrate string operations and list processing with customer feedback.&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic"># Sample customer feedback data</span>
+</span></span><span style="display:flex;"><span>    reviews <span style="color:#ff7b72;font-weight:bold">=</span> [
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">&#34;  EXCELLENT service and fast delivery! Really happy with my purchase.  &#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">&#34;good product, but shipping was slow&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">&#34;Amazing quality! Will definitely buy again. 5 stars!!!&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">&#34;Poor packaging, item arrived damaged :(&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">&#34;Best online store ever! Great customer service.&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">&#34;Product was okay, nothing special&#34;</span>
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    print(<span style="color:#a5d6ff">&#34;=== Original Feedback ===&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">for</span> i, review <span style="color:#ff7b72;font-weight:bold">in</span> enumerate(reviews, <span style="color:#a5d6ff">1</span>):  <span style="color:#8b949e;font-style:italic"># Start numbering at 1</span>
+</span></span><span style="display:flex;"><span>        print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;</span><span style="color:#a5d6ff">{</span>i<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">. &#39;</span><span style="color:#a5d6ff">{</span>review<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#39;&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic"># String cleaning using list comprehension</span>
+</span></span><span style="display:flex;"><span>    cleaned_reviews <span style="color:#ff7b72;font-weight:bold">=</span> []
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">for</span> review <span style="color:#ff7b72;font-weight:bold">in</span> reviews:
+</span></span><span style="display:flex;"><span>        cleaned <span style="color:#ff7b72;font-weight:bold">=</span> review<span style="color:#ff7b72;font-weight:bold">.</span>strip()<span style="color:#ff7b72;font-weight:bold">.</span>lower()
+</span></span><span style="display:flex;"><span>        <span style="color:#8b949e;font-style:italic"># Remove excessive punctuation</span>
+</span></span><span style="display:flex;"><span>        cleaned <span style="color:#ff7b72;font-weight:bold">=</span> cleaned<span style="color:#ff7b72;font-weight:bold">.</span>replace(<span style="color:#a5d6ff">&#39;!!!&#39;</span>, <span style="color:#a5d6ff">&#39;!&#39;</span>)<span style="color:#ff7b72;font-weight:bold">.</span>replace(<span style="color:#a5d6ff">&#39;!!&#39;</span>, <span style="color:#a5d6ff">&#39;!&#39;</span>)
+</span></span><span style="display:flex;"><span>        cleaned_reviews<span style="color:#ff7b72;font-weight:bold">.</span>append(cleaned)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;</span><span style="color:#79c0ff">\n</span><span style="color:#a5d6ff">=== Cleaned Reviews ===&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">for</span> i, review <span style="color:#ff7b72;font-weight:bold">in</span> enumerate(cleaned_reviews, <span style="color:#a5d6ff">1</span>):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;</span><span style="color:#a5d6ff">{</span>i<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">. &#39;</span><span style="color:#a5d6ff">{</span>review<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#39;&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic"># List comprehension for length analysis</span>
+</span></span><span style="display:flex;"><span>    review_lengths <span style="color:#ff7b72;font-weight:bold">=</span> [len(review) <span style="color:#ff7b72">for</span> review <span style="color:#ff7b72;font-weight:bold">in</span> cleaned_reviews]
+</span></span><span style="display:flex;"><span>    total_characters <span style="color:#ff7b72;font-weight:bold">=</span> sum(review_lengths)
+</span></span><span style="display:flex;"><span>    longest_review <span style="color:#ff7b72;font-weight:bold">=</span> max(cleaned_reviews, key<span style="color:#ff7b72;font-weight:bold">=</span>len)
+</span></span><span style="display:flex;"><span>    shortest_review <span style="color:#ff7b72;font-weight:bold">=</span> min(cleaned_reviews, key<span style="color:#ff7b72;font-weight:bold">=</span>len)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;</span><span style="color:#79c0ff">\n</span><span style="color:#a5d6ff">=== Length Analysis ===&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Total reviews: </span><span style="color:#a5d6ff">{</span>len(reviews)<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Review lengths: </span><span style="color:#a5d6ff">{</span>review_lengths<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Total characters: </span><span style="color:#a5d6ff">{</span>total_characters<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Average length: </span><span style="color:#a5d6ff">{</span>total_characters <span style="color:#ff7b72;font-weight:bold">/</span> len(reviews)<span style="color:#a5d6ff">:</span><span style="color:#a5d6ff">.1f</span><span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Longest: &#39;</span><span style="color:#a5d6ff">{</span>longest_review<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#39;&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Shortest: &#39;</span><span style="color:#a5d6ff">{</span>shortest_review<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#39;&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic"># Word frequency analysis</span>
+</span></span><span style="display:flex;"><span>    all_words <span style="color:#ff7b72;font-weight:bold">=</span> []
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">for</span> review <span style="color:#ff7b72;font-weight:bold">in</span> cleaned_reviews:
+</span></span><span style="display:flex;"><span>        words <span style="color:#ff7b72;font-weight:bold">=</span> review<span style="color:#ff7b72;font-weight:bold">.</span>split()
+</span></span><span style="display:flex;"><span>        all_words<span style="color:#ff7b72;font-weight:bold">.</span>extend(words)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic"># Count word frequencies using dictionary</span>
+</span></span><span style="display:flex;"><span>    word_counts <span style="color:#ff7b72;font-weight:bold">=</span> {}
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">for</span> word <span style="color:#ff7b72;font-weight:bold">in</span> all_words:
+</span></span><span style="display:flex;"><span>        <span style="color:#8b949e;font-style:italic"># Remove punctuation for counting</span>
+</span></span><span style="display:flex;"><span>        clean_word <span style="color:#ff7b72;font-weight:bold">=</span> word<span style="color:#ff7b72;font-weight:bold">.</span>strip(<span style="color:#a5d6ff">&#39;.,!:();&#39;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">if</span> clean_word:  <span style="color:#8b949e;font-style:italic"># Skip empty strings</span>
+</span></span><span style="display:flex;"><span>            word_counts[clean_word] <span style="color:#ff7b72;font-weight:bold">=</span> word_counts<span style="color:#ff7b72;font-weight:bold">.</span>get(clean_word, <span style="color:#a5d6ff">0</span>) <span style="color:#ff7b72;font-weight:bold">+</span> <span style="color:#a5d6ff">1</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic"># Find most common words</span>
+</span></span><span style="display:flex;"><span>    sorted_words <span style="color:#ff7b72;font-weight:bold">=</span> sorted(word_counts<span style="color:#ff7b72;font-weight:bold">.</span>items(), key<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#ff7b72">lambda</span> x: x[<span style="color:#a5d6ff">1</span>], reverse<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#79c0ff">True</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;</span><span style="color:#79c0ff">\n</span><span style="color:#a5d6ff">=== Word Frequency (Top 10) ===&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">for</span> word, count <span style="color:#ff7b72;font-weight:bold">in</span> sorted_words[:<span style="color:#a5d6ff">10</span>]:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;&#39;</span><span style="color:#a5d6ff">{</span>word<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#39;: </span><span style="color:#a5d6ff">{</span>count<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic"># Sentiment analysis (simple keyword-based)</span>
+</span></span><span style="display:flex;"><span>    positive_words <span style="color:#ff7b72;font-weight:bold">=</span> [<span style="color:#a5d6ff">&#39;excellent&#39;</span>, <span style="color:#a5d6ff">&#39;good&#39;</span>, <span style="color:#a5d6ff">&#39;amazing&#39;</span>, <span style="color:#a5d6ff">&#39;great&#39;</span>, <span style="color:#a5d6ff">&#39;best&#39;</span>, <span style="color:#a5d6ff">&#39;happy&#39;</span>]
+</span></span><span style="display:flex;"><span>    negative_words <span style="color:#ff7b72;font-weight:bold">=</span> [<span style="color:#a5d6ff">&#39;poor&#39;</span>, <span style="color:#a5d6ff">&#39;slow&#39;</span>, <span style="color:#a5d6ff">&#39;damaged&#39;</span>, <span style="color:#a5d6ff">&#39;bad&#39;</span>, <span style="color:#a5d6ff">&#39;terrible&#39;</span>, <span style="color:#a5d6ff">&#39;awful&#39;</span>]
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    sentiment_scores <span style="color:#ff7b72;font-weight:bold">=</span> []
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">for</span> review <span style="color:#ff7b72;font-weight:bold">in</span> cleaned_reviews:
+</span></span><span style="display:flex;"><span>        positive_score <span style="color:#ff7b72;font-weight:bold">=</span> sum(<span style="color:#a5d6ff">1</span> <span style="color:#ff7b72">for</span> word <span style="color:#ff7b72;font-weight:bold">in</span> positive_words <span style="color:#ff7b72">if</span> word <span style="color:#ff7b72;font-weight:bold">in</span> review)
+</span></span><span style="display:flex;"><span>        negative_score <span style="color:#ff7b72;font-weight:bold">=</span> sum(<span style="color:#a5d6ff">1</span> <span style="color:#ff7b72">for</span> word <span style="color:#ff7b72;font-weight:bold">in</span> negative_words <span style="color:#ff7b72">if</span> word <span style="color:#ff7b72;font-weight:bold">in</span> review)
+</span></span><span style="display:flex;"><span>        net_sentiment <span style="color:#ff7b72;font-weight:bold">=</span> positive_score <span style="color:#ff7b72;font-weight:bold">-</span> negative_score
+</span></span><span style="display:flex;"><span>        sentiment_scores<span style="color:#ff7b72;font-weight:bold">.</span>append(net_sentiment)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;</span><span style="color:#79c0ff">\n</span><span style="color:#a5d6ff">=== Sentiment Analysis ===&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">for</span> i, (review, score) <span style="color:#ff7b72;font-weight:bold">in</span> enumerate(zip(cleaned_reviews, sentiment_scores), <span style="color:#a5d6ff">1</span>):
+</span></span><span style="display:flex;"><span>        sentiment <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">&#34;Positive&#34;</span> <span style="color:#ff7b72">if</span> score <span style="color:#ff7b72;font-weight:bold">&gt;</span> <span style="color:#a5d6ff">0</span> <span style="color:#ff7b72">else</span> <span style="color:#a5d6ff">&#34;Negative&#34;</span> <span style="color:#ff7b72">if</span> score <span style="color:#ff7b72;font-weight:bold">&lt;</span> <span style="color:#a5d6ff">0</span> <span style="color:#ff7b72">else</span> <span style="color:#a5d6ff">&#34;Neutral&#34;</span>
+</span></span><span style="display:flex;"><span>        print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;</span><span style="color:#a5d6ff">{</span>i<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">. </span><span style="color:#a5d6ff">{</span>sentiment<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff"> (</span><span style="color:#a5d6ff">{</span>score<span style="color:#a5d6ff">:</span><span style="color:#a5d6ff">+d</span><span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">): &#39;</span><span style="color:#a5d6ff">{</span>review[:<span style="color:#a5d6ff">50</span>]<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">...&#39;&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic"># Statistics</span>
+</span></span><span style="display:flex;"><span>    positive_count <span style="color:#ff7b72;font-weight:bold">=</span> sum(<span style="color:#a5d6ff">1</span> <span style="color:#ff7b72">for</span> score <span style="color:#ff7b72;font-weight:bold">in</span> sentiment_scores <span style="color:#ff7b72">if</span> score <span style="color:#ff7b72;font-weight:bold">&gt;</span> <span style="color:#a5d6ff">0</span>)
+</span></span><span style="display:flex;"><span>    negative_count <span style="color:#ff7b72;font-weight:bold">=</span> sum(<span style="color:#a5d6ff">1</span> <span style="color:#ff7b72">for</span> score <span style="color:#ff7b72;font-weight:bold">in</span> sentiment_scores <span style="color:#ff7b72">if</span> score <span style="color:#ff7b72;font-weight:bold">&lt;</span> <span style="color:#a5d6ff">0</span>)
+</span></span><span style="display:flex;"><span>    neutral_count <span style="color:#ff7b72;font-weight:bold">=</span> len(sentiment_scores) <span style="color:#ff7b72;font-weight:bold">-</span> positive_count <span style="color:#ff7b72;font-weight:bold">-</span> negative_count
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;</span><span style="color:#79c0ff">\n</span><span style="color:#a5d6ff">=== Overall Statistics ===&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Total reviews: </span><span style="color:#a5d6ff">{</span>len(reviews)<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Positive: </span><span style="color:#a5d6ff">{</span>positive_count<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff"> (</span><span style="color:#a5d6ff">{</span>positive_count<span style="color:#ff7b72;font-weight:bold">/</span>len(reviews)<span style="color:#ff7b72;font-weight:bold">*</span><span style="color:#a5d6ff">100</span><span style="color:#a5d6ff">:</span><span style="color:#a5d6ff">.1f</span><span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">%)&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Negative: </span><span style="color:#a5d6ff">{</span>negative_count<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff"> (</span><span style="color:#a5d6ff">{</span>negative_count<span style="color:#ff7b72;font-weight:bold">/</span>len(reviews)<span style="color:#ff7b72;font-weight:bold">*</span><span style="color:#a5d6ff">100</span><span style="color:#a5d6ff">:</span><span style="color:#a5d6ff">.1f</span><span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">%)&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Neutral: </span><span style="color:#a5d6ff">{</span>neutral_count<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff"> (</span><span style="color:#a5d6ff">{</span>neutral_count<span style="color:#ff7b72;font-weight:bold">/</span>len(reviews)<span style="color:#ff7b72;font-weight:bold">*</span><span style="color:#a5d6ff">100</span><span style="color:#a5d6ff">:</span><span style="color:#a5d6ff">.1f</span><span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">%)&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Total unique words: </span><span style="color:#a5d6ff">{</span>len(word_counts)<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Average words per review: </span><span style="color:#a5d6ff">{</span>len(all_words) <span style="color:#ff7b72;font-weight:bold">/</span> len(reviews)<span style="color:#a5d6ff">:</span><span style="color:#a5d6ff">.1f</span><span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">return</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">&#39;reviews&#39;</span>: cleaned_reviews,
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">&#39;word_counts&#39;</span>: word_counts,
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">&#39;sentiment_scores&#39;</span>: sentiment_scores,
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">&#39;stats&#39;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#a5d6ff">&#39;positive&#39;</span>: positive_count,
+</span></span><span style="display:flex;"><span>            <span style="color:#a5d6ff">&#39;negative&#39;</span>: negative_count,
+</span></span><span style="display:flex;"><span>            <span style="color:#a5d6ff">&#39;neutral&#39;</span>: neutral_count
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Example usage</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">if</span> <span style="color:#79c0ff">__name__</span> <span style="color:#ff7b72;font-weight:bold">==</span> <span style="color:#a5d6ff">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    analysis <span style="color:#ff7b72;font-weight:bold">=</span> analyze_customer_feedback()
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;</span><span style="color:#79c0ff">\n</span><span style="color:#a5d6ff">Most positive review score: </span><span style="color:#a5d6ff">{</span>max(analysis[<span style="color:#a5d6ff">&#39;sentiment_scores&#39;</span>])<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Most negative review score: </span><span style="color:#a5d6ff">{</span>min(analysis[<span style="color:#a5d6ff">&#39;sentiment_scores&#39;</span>])<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="what-to-notice-1">
+  What to Notice:
+  <a class="anchor" href="#what-to-notice-1">#</a>
+</h3>
+<details ><summary>Python Loop Patterns and Built-ins</summary>
+  <div class="markdown-inner">
+    
+**enumerate() for indexed loops**:
+```python
+for i, review in enumerate(reviews, 1):  # Start at 1
+    print(f"{i}. '{review}'")
+```
+- More Pythonic than `for i in range(len(reviews))`
+- Automatically provides both index and value
+
+**zip() for parallel iteration**:
+```python
+for i, (review, score) in enumerate(zip(cleaned_reviews, sentiment_scores), 1):
+```
+- Combines multiple iterables
+- Automatically stops at shortest sequence
+
+  </div>
+</details>
+
+<details ><summary>List Comprehensions and Data Processing</summary>
+  <div class="markdown-inner">
+    
+**List comprehension for transformation**:
+```python
+review_lengths = [len(review) for review in cleaned_reviews]
+```
+- More concise than equivalent for loop
+- Creates new list from existing data
+
+**Conditional expressions in comprehensions**:
+```python
+positive_count = sum(1 for score in sentiment_scores if score > 0)
+```
+- Combines iteration, filtering, and counting
+- `sum()` with generator expression for efficiency
+
+  </div>
+</details>
+
+<details ><summary>Dictionary Operations and Frequency Counting</summary>
+  <div class="markdown-inner">
+    
+**Dictionary.get() for safe counting**:
+```python
+word_counts[clean_word] = word_counts.get(clean_word, 0) + 1
+```
+- Avoids KeyError when key doesn't exist
+- More concise than if/else checking
+
+**Sorting with lambda functions**:
+```python
+sorted_words = sorted(word_counts.items(), key=lambda x: x[1], reverse=True)
+```
+- `lambda x: x[1]` sorts by count (second element of tuple)
+- `reverse=True` for descending order
+
+  </div>
+</details>
+
+<details ><summary>String Processing Methods</summary>
+  <div class="markdown-inner">
+    
+**String cleaning pipeline**:
+```python
+cleaned = review.strip().lower()
+cleaned = cleaned.replace('!!!', '!').replace('!!', '!')
+```
+- Method chaining for multiple transformations
+- `strip()` removes whitespace, `lower()` normalizes case
+
+**String splitting and joining**:
+```python
+words = review.split()  # Split on whitespace
+clean_word = word.strip('.,!:();')  # Remove punctuation
+```
+
+  </div>
+</details>
+
+<h3 id="trace-through-example-1">
+  Trace Through Example:
+  <a class="anchor" href="#trace-through-example-1">#</a>
+</h3>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">16
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Initial data:</span>
+</span></span><span style="display:flex;"><span>reviews <span style="color:#ff7b72;font-weight:bold">=</span> [<span style="color:#a5d6ff">&#34;  EXCELLENT service...&#34;</span>, <span style="color:#a5d6ff">&#34;good product...&#34;</span>, <span style="color:#ff7b72;font-weight:bold">...</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Processing first review:</span>
+</span></span><span style="display:flex;"><span>review <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">&#34;  EXCELLENT service and fast delivery! Really happy...&#34;</span>
+</span></span><span style="display:flex;"><span>cleaned <span style="color:#ff7b72;font-weight:bold">=</span> review<span style="color:#ff7b72;font-weight:bold">.</span>strip()<span style="color:#ff7b72;font-weight:bold">.</span>lower()  <span style="color:#8b949e;font-style:italic"># &#34;excellent service and fast delivery!...&#34;</span>
+</span></span><span style="display:flex;"><span>words <span style="color:#ff7b72;font-weight:bold">=</span> cleaned<span style="color:#ff7b72;font-weight:bold">.</span>split()  <span style="color:#8b949e;font-style:italic"># [&#34;excellent&#34;, &#34;service&#34;, &#34;and&#34;, &#34;fast&#34;, ...]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Sentiment analysis:</span>
+</span></span><span style="display:flex;"><span>positive_words <span style="color:#ff7b72;font-weight:bold">in</span> <span style="color:#a5d6ff">&#34;excellent service...&#34;</span> <span style="color:#f85149">→</span> finds <span style="color:#a5d6ff">&#34;excellent&#34;</span> <span style="color:#f85149">→</span> <span style="color:#ff7b72;font-weight:bold">+</span><span style="color:#a5d6ff">1</span>
+</span></span><span style="display:flex;"><span>negative_words <span style="color:#ff7b72;font-weight:bold">in</span> <span style="color:#a5d6ff">&#34;excellent service...&#34;</span> <span style="color:#f85149">→</span> finds none <span style="color:#f85149">→</span> <span style="color:#a5d6ff">0</span>
+</span></span><span style="display:flex;"><span>net_sentiment <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">1</span> <span style="color:#ff7b72;font-weight:bold">-</span> <span style="color:#a5d6ff">0</span> <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">1</span> (Positive)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Final statistics:</span>
+</span></span><span style="display:flex;"><span>positive_count <span style="color:#ff7b72;font-weight:bold">=</span> sum([<span style="color:#a5d6ff">1</span>, <span style="color:#a5d6ff">0</span>, <span style="color:#a5d6ff">1</span>, <span style="color:#ff7b72;font-weight:bold">-</span><span style="color:#a5d6ff">1</span>, <span style="color:#a5d6ff">1</span>, <span style="color:#a5d6ff">0</span>])  <span style="color:#8b949e;font-style:italic"># Count scores &gt; 0</span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Result: 3 positive reviews out of 6 total</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="practice-exercises">
+  Practice Exercises
+  <a class="anchor" href="#practice-exercises">#</a>
+</h2>
+<blockquote class="book-hint tip">
+  
+**Reading Exercise 1**: Trace through the shopping cart calculation with `item_count=5`, `unit_price=9.99`. Will shipping be free?
+
+**Reading Exercise 2**: In the feedback analyzer, what happens if you add the word "great" to a review? How does it affect the sentiment score?
+
+**Reading Exercise 3**: Compare the Python list comprehension `[len(review) for review in reviews]` with the equivalent Java code. Which is more readable?
+
+**Reading Exercise 4**: Identify all the places where Python's built-in functions (`enumerate`, `zip`, `sum`, `max`, `min`) simplify the code compared to manual loops.
+
+</blockquote>
+
+<p><a  href="/python/fundamentals/"   target="_blank" rel="noopener"  class="book-btn">← Previous: Fundamentals</a>
+ <a  href="/python/beginner-basics/"   target="_blank" rel="noopener"  class="book-btn">Next: Advanced Examples →</a>
+</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#how-to-read-python-control-structures">How to Read Python Control Structures</a></li>
+    <li><a href="#example-1-shopping-cart-with-complex-conditional-logic">Example 1: Shopping Cart with Complex Conditional Logic</a>
+      <ul>
+        <li><a href="#code-to-read">Code to Read:</a></li>
+        <li><a href="#what-to-notice">What to Notice:</a></li>
+        <li><a href="#trace-through-example">Trace Through Example:</a></li>
+      </ul>
+    </li>
+    <li><a href="#example-2-list-processing-with-loops-and-comprehensions">Example 2: List Processing with Loops and Comprehensions</a>
+      <ul>
+        <li><a href="#code-to-read-1">Code to Read:</a></li>
+        <li><a href="#what-to-notice-1">What to Notice:</a></li>
+        <li><a href="#trace-through-example-1">Trace Through Example:</a></li>
+      </ul>
+    </li>
+    <li><a href="#practice-exercises">Practice Exercises</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

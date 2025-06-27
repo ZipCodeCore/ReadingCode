@@ -1,0 +1,60 @@
+{{ define "main" }}
+<article class="article">
+    <header class="article-header">
+        <div class="article-container">
+            {{ if .Section }}
+            <nav class="breadcrumb">
+                <a href="/">Home</a>
+                <span>/</span>
+                <a href="/{{ .Section }}/">{{ .Section | title }}</a>
+                <span>/</span>
+                <span>{{ .Title }}</span>
+            </nav>
+            {{ end }}
+            <h1 class="article-title">{{ .Title }}</h1>
+            {{ if .Params.description }}
+            <p class="article-description">{{ .Params.description }}</p>
+            {{ end }}
+            <div class="article-meta">
+                {{ if .Params.difficulty }}
+                <span class="difficulty difficulty-{{ .Params.difficulty }}">{{ .Params.difficulty | title }}</span>
+                {{ end }}
+                {{ if .Params.topics }}
+                <div class="topics">
+                    {{ range .Params.topics }}
+                    <span class="topic">{{ . }}</span>
+                    {{ end }}
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </header>
+
+    <div class="article-content">
+        <div class="article-container">
+            {{ .Content }}
+        </div>
+    </div>
+
+    {{ if or .NextInSection .PrevInSection }}
+    <nav class="article-nav">
+        <div class="article-container">
+            <div class="article-nav-links">
+                {{ if .PrevInSection }}
+                <a href="{{ .PrevInSection.RelPermalink }}" class="article-nav-link article-nav-prev">
+                    <span class="article-nav-label">← Previous</span>
+                    <span class="article-nav-title">{{ .PrevInSection.Title }}</span>
+                </a>
+                {{ end }}
+                {{ if .NextInSection }}
+                <a href="{{ .NextInSection.RelPermalink }}" class="article-nav-link article-nav-next">
+                    <span class="article-nav-label">Next →</span>
+                    <span class="article-nav-title">{{ .NextInSection.Title }}</span>
+                </a>
+                {{ end }}
+            </div>
+        </div>
+    </nav>
+    {{ end }}
+</article>
+{{ end }}

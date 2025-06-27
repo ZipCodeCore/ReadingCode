@@ -1,0 +1,55 @@
+{{ define "main" }}
+<div class="section-page">
+    <header class="section-header">
+        <div class="section-container">
+            <h1 class="section-title">{{ .Title }}</h1>
+            {{ if .Content }}
+            <div class="section-description">
+                {{ .Content }}
+            </div>
+            {{ end }}
+        </div>
+    </header>
+
+    <div class="section-content">
+        <div class="section-container">
+            {{ if .Pages }}
+            <div class="examples-grid">
+                {{ range .Pages.ByWeight }}
+                <article class="example-card">
+                    <div class="example-header">
+                        <h3 class="example-title">
+                            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                        </h3>
+                        {{ if .Params.difficulty }}
+                        <span class="difficulty difficulty-{{ .Params.difficulty }}">{{ .Params.difficulty | title }}</span>
+                        {{ end }}
+                    </div>
+                    {{ if .Params.description }}
+                    <p class="example-description">{{ .Params.description }}</p>
+                    {{ end }}
+                    {{ if .Params.topics }}
+                    <div class="example-topics">
+                        {{ range .Params.topics }}
+                        <span class="topic">{{ . }}</span>
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                    <div class="example-footer">
+                        <a href="{{ .RelPermalink }}" class="example-link">Read Example →</a>
+                        {{ if .Params.readingTime }}
+                        <span class="reading-time">~{{ .Params.readingTime }} min read</span>
+                        {{ end }}
+                    </div>
+                </article>
+                {{ end }}
+            </div>
+            {{ else }}
+            <div class="no-content">
+                <p>No examples available yet. Check back soon!</p>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ end }}

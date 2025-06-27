@@ -1,0 +1,36 @@
+baseURL = 'https://kristofer.github.io/ReadingCode'
+languageCode = 'en-us'
+title = 'Code Reading Practice Hub'
+theme = 'hugo-book'
+
+# Hugo Book theme configuration
+[params]
+  # Book configuration
+  BookTheme = 'auto'
+  BookMenuBundle = '/menu'
+  BookSection = '*'
+  BookSearch = true
+  BookComments = false
+  BookPortableLinks = true
+  BookServiceWorker = true
+  BookTranslationBase = 'https://kristofer.github.io/ReadingCode'
+  
+  # Site description
+  description = "Master programming by reading and understanding code examples"
+  author = "Code Reading Practice"
+  
+  # Code highlighting
+  BookCollapseSection = false
+  BookRepo = 'https://github.com/kristofer/ReadingCode'
+  BookEditPage = false
+
+# Remove the old menu configuration since Hugo Book uses a different approach
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "github-dark"
+    lineNos = true
+    tabWidth = 4
